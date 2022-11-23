@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import { useAuth } from '../../context/AuthState'
 import Logout from '../../public/navbar/logout.svg'
 import Home from '../../public/navbar/home.svg'
 import Setting from '../../public/navbar/setting.svg'
 import Blog from '../../public/navbar/blog.svg'
-import Tution from '../../public/navbar/tution.svg'
+import Tution from '../../public/navbar/tuition.svg'
 import Test from '../../public/navbar/test.svg'
-import Note from '../../public/navbar/notes.svg'
+import Statement from '../../public/navbar/statement.svg'
 import Store from '../../public/navbar/store.svg'
 import Support from '../../public/navbar/support.svg'
 
@@ -19,7 +19,7 @@ const Sidebar = () => {
     return (
         <>
 
-            <aside className=" md:flex flex-col px-3  shadow-md  w-auto border-r-2 border-r-gray-500 h-screen fixed text-gray-700 bg-slate-200  top-0 " title='StudentPortal '>
+            <aside className=" md:flex flex-col px-3 z-10 shadow-md  w-auto border-r-2 border-r-gray-500 h-screen fixed text-gray-700 bg-slate-200  top-0 " title='StudentPortal '>
 
                 <Link className="flex  mt-4 top-0" href="/">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-10  h-10 ml-[6px] text-cyan-600" viewBox="0 0 24 24">
@@ -48,17 +48,17 @@ const Sidebar = () => {
                             </div>
                             <div className='flex text-base font-medium mx-auto items-center justify-center'>Tuition</div>
                         </Link>
-                        <Link className="flex items-center justify-center w-auto h-12 mt-2 rounded hover:bg-white   " href="/" title='Quizzes & Pratice Papers' >
+                        <Link className="flex items-center justify-center w-auto h-12 mt-2 rounded hover:bg-white   " href="/notes/physics" title='Quizzes & Pratice Papers' >
                             <div className='flex items-center justify-center w-12 h-12 ml-[2px]'>
                                 <Image src={Test} alt="Home" width={33.35} height={33.35} />
                             </div>
                             <div className='flex flex-wrap text-base font-medium mx-auto items-center justify-center'>Quizzes & Papers</div>
                         </Link>
-                        <Link className="flex items-center justify-center w-auto h-12 mt-2 rounded hover:bg-white   " href="/" title='Notes' >
+                        <Link className="flex items-center justify-center w-auto h-12 mt-2 rounded hover:bg-white   " href="/" title='Personal Statement' >
                             <div className='flex items-center justify-center w-12 h-12 ml-[2px]'>
-                                <Image src={Note} alt="Home" width={33.35} height={33.35} />
+                                <Image src={Statement} alt="Personal Statement" width={33.35} height={33.35} />
                             </div>
-                            <div className='flex text-base font-medium mx-auto items-center justify-center'>Notes</div>
+                            <div className='flex text-sm font-medium mx-auto items-center justify-center'>Personal Statement</div>
                         </Link>
                         <Link className="flex items-center justify-center w-auto h-12 mt-2 rounded hover:bg-white   " href="/" title='Store' >
                             <div className='flex items-center justify-center w-12 h-12 ml-[2px]'>

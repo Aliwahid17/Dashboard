@@ -76,7 +76,7 @@ const AuthState = ({ children }: any) => {
                     theme: "light",
                 });
 
-                await addDoc(collection(db, 'Access Attempted'), {
+                await addDoc(collection(db, 'Access-Attempted'), {
                     'displayName': res.displayName,
                     'email': res.email,
                     'creationTime': res.metadata.creationTime,
@@ -85,6 +85,8 @@ const AuthState = ({ children }: any) => {
                     'phoneNumber': res.phoneNumber,
                     'lastSignInTime': res.metadata.lastSignInTime,
                 })
+
+                setLoading(false)
 
             }
 

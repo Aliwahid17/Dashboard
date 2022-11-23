@@ -6,15 +6,15 @@ import Logout from '../../public/navbar/logout.svg'
 import Home from '../../public/navbar/home.svg'
 import Setting from '../../public/navbar/setting.svg'
 import Blog from '../../public/navbar/blog.svg'
-import Tution from '../../public/navbar/tution.svg'
+import Tution from '../../public/navbar/tuition.svg'
 import Test from '../../public/navbar/test.svg'
-import Note from '../../public/navbar/notes.svg'
 import Store from '../../public/navbar/store.svg'
 import Support from '../../public/navbar/support.svg'
+import Statement from '../../public/navbar/statement.svg'
 
 const Minibar = () => {
 
-    const { user, logOut, userPermisssions } = useAuth()
+    const { user, logOut } = useAuth()
 
     return (
         <>
@@ -43,12 +43,12 @@ const Minibar = () => {
                             <Image src={Tution} alt="Home" width={33.35} height={33.35} />
                         </Link>
 
-                        <Link className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-white   " href="/" title='Quizzes & Pratice Papers'>
+                        <Link className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-white   " href="/notes/physics" title='Quizzes & Pratice Papers'>
                             <Image src={Test} alt="Home" width={33.35} height={33.35} />
                         </Link>
 
-                        <Link className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-white   " href="/" title='Notes'>
-                            <Image src={Note} alt="Home" width={33.35} height={33.35} />
+                        <Link className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-white   " href="/" title='Personal Statement'>
+                            <Image src={Statement} alt="Personal Statement" width={33.35} height={33.35} />
                         </Link>
 
                         <Link className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-white   " href="/" title='Store'>

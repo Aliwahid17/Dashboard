@@ -16,12 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
     <AuthState>
       <ProtectedRoute >
-
-      <Topbar />
-      <Component {...pageProps} />
-
-
-
+        <Topbar />
+        <div className=" container p-4 md:pl-20  ">
+          <Component {...pageProps} />
+        </div>
       </ProtectedRoute>
     </AuthState>
 

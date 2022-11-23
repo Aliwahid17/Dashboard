@@ -20,7 +20,7 @@ const Settings = () => {
 
             </div>
 
-            <div className='mt-3'>
+            <div className='mt-4'>
 
                 {active ? <Create /> : <Current /> } 
 
